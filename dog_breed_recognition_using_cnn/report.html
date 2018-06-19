@@ -13247,7 +13247,9 @@ Percentage of images with dog where human faces where detected: 11%
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Question 2:</strong> This algorithmic choice necessitates that we communicate to the user that we accept human images only when they provide a clear view of a face (otherwise, we risk having unneccessarily frustrated users!). In your opinion, is this a reasonable expectation to pose on the user? If not, can you think of a way to detect humans in images that does not necessitate an image with a clearly presented face?</p>
-<p><strong>Answer:</strong></p>
+<p><strong>Answer:</strong>
+This is not a reasonable expectation to pose on the user. To solve this problem we could improve the face detection algorithm or change the way the algorithm interacts with the user. A better face detection algorithm could be a CNN trained with all sort of images with faces, in a way that we do not need a clear view of the face.
+Regarding the user experience, instead of having an image as input, we could have the algorithm running in a stream of images like in the preview mode (moment before taking a picture), that is going to increase the changes of finding the face.</p>
 <p>We suggest the face detector from OpenCV as a potential way to detect human images in your algorithm, but you are free to explore other approaches, especially approaches that make use of deep learning :).  Please use the code cell below to design and test your own face detection algorithm.  If you decide to pursue this <em>optional</em> task, report performance on each of the datasets.</p>
 
 </div>
